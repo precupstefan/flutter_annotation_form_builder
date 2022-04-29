@@ -1,0 +1,10 @@
+targets:
+  $default:
+    builders:
+      formGeneratorBuilder:
+        enabled: True
+        options:
+          build_extensions:
+            '^lib/{{}}.dart': 'lib/generated/{{}}.g.dart'
+#        generate_for:
+#          - lib/teste/*
