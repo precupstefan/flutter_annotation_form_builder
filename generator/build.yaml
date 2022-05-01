@@ -1,6 +1,6 @@
 builders:
   formGeneratorBuilder:
-    import: 'package:generator/flutter_annotation_form_builder_generator.dart'
+    import: 'package:flutter_annotation_form_builder_generator/flutter_annotation_form_builder_generator.dart'
     builder_factories: ['formGeneratorBuilder']
     auto_apply: dependents
     build_extensions: {'^lib/{{}}.dart': ['lib/generated/{{}}.g.dart']}
