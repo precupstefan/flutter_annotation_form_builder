@@ -1,7 +1,7 @@
 name: generator
-description: A new Flutter package project.
+description: Generate form widgets from entities for flutter_form_builder package
 version: 0.0.1
-homepage:
+homepage: https://github.com/precupstefan/flutter_annotation_form_builder
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
