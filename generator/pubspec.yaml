@@ -1,4 +1,4 @@
-name: generator
+name: flutter_annotation_form_builder_generator
 description: Generate form widgets from entities for flutter_form_builder package
 version: 0.0.1
 homepage: https://github.com/precupstefan/flutter_annotation_form_builder
@@ -10,15 +10,24 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  source_gen: any
-  flutter_annotation_form_builder:
-    path: ../flutter_annotation_form_builder
+  source_gen: ^1.0.0
+  flutter_annotation_form_builder: ^0.0.1
+  build_runner: ^2.0.0
+  path: ^1.8.1
+  build: ^2.0.0
+  dart_style: ^2.0.0
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
-  build_runner: any
+
+
+# NOTE: remove before publishing
+dependency_overrides:
+  flutter_annotation_form_builder:
+    path: ../flutter_annotation_form_builder
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

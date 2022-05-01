@@ -1,9 +1,8 @@
 import 'dart:async';
-import 'dart:ffi';
 import 'package:flutter_annotation_form_builder/flutter_annotation_form_builder.dart';
-import 'package:generator/src/code_chunks.dart';
-import 'package:generator/src/config.dart';
-import 'package:generator/src/entity_info.dart';
+import 'code_chunks.dart';
+import 'config.dart';
+import 'entity_info.dart';
 import 'package:path/path.dart' as path;
 import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';

@@ -1,4 +1,4 @@
-import 'package:generator/src/entity_info.dart';
+import 'entity_info.dart';
 
 class CodeChunks {
   static String createFile(
