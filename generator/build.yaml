@@ -3,5 +3,5 @@ builders:
     import: 'package:generator/generator.dart'
     builder_factories: ['formGeneratorBuilder']
     auto_apply: dependents
-    build_extensions: {".dart": [".g.part"]}
+    build_extensions: {'^lib/{{}}.dart': ['lib/generated/{{}}.g.dart']}
     build_to: source

@@ -38,12 +38,15 @@ class FormGenerator extends Builder {
     // if (libReader.annotatedWith(_formBuilderEntityChecker)){
     var elements = libReader.allElements;
     if (elements.isEmpty) return;
+    if (libReader.annotatedWith(_formBuilderEntityChecker).isEmpty) {
+      return;
+    }
     if (libReader.annotatedWith(_formBuilderEntityChecker).length != 1) {
-      log.severe("More than 1 entity annotation per file");
+      log.info("More than 1 entity annotation per file");
       return;
     }
     if (elements.length > 1) {
-      log.severe("More than 1 class in file");
+      log.info("More than 1 class in file");
       return;
     }
 
@@ -66,8 +69,11 @@ class FormGenerator extends Builder {
     try {
       code = DartFormatter().format(code);
     } finally {
+      var outdir = _dir(buildStep);
+      var fileName = path.basenameWithoutExtension(buildStep.inputId.path);
+
       final codeId =
-          AssetId(buildStep.inputId.package, "lib/teste/unFisier.x.dart");
+          AssetId(buildStep.inputId.package, "${outdir}/${fileName}.form.dart");
       await buildStep.writeAsString(codeId, code);
     }
   }
@@ -90,13 +96,13 @@ class FormGenerator extends Builder {
         options.getField("inputType")?.getField("index")?.toIntValue();
     s["inputType"] = InputType.values[inputTypeIndex!].name;
     s["propertyName"] = f.name;
-    s["options"] = options.getField("options")?.toMapValue()?.map((key, value) =>
-        MapEntry(key?.toStringValue(), value?.toStringValue()));
+    s["options"] = options.getField("options")?.toMapValue()?.map(
+        (key, value) => MapEntry(key?.toStringValue(), value?.toStringValue()));
     return s;
   }
 
   @override
   Map<String, List<String>> get buildExtensions => {
-        ".dart": [".x.dart"]
+        ".dart": [".form.dart"]
       };
 }

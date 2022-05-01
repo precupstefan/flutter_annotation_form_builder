@@ -5,6 +5,6 @@ targets:
         enabled: True
         options:
           build_extensions:
-            '^lib/{{}}.dart': 'lib/generated/{{}}.g.dart'
+            '^lib/{{}}.dart': ['lib/generated/{{}}.g.dart']
 #        generate_for:
 #          - lib/teste/*
