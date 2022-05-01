@@ -54,7 +54,7 @@ class CodeChunks {
     return """
     FormBuilder${input["inputType"]}(
       name: "${input["propertyName"]}",
-      ${input["options"].entries.fold("", (previousValue, MapEntry<String, String> element) => previousValue + "${element.key}:${element.value},")}
+      ${input["options"].entries.fold("", (previousValue, MapEntry<String?, String?> element) => previousValue + "${element.key}:${element.value},")}
     ),
     """;
   }

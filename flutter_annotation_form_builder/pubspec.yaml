@@ -1,6 +1,6 @@
 name: flutter_annotation_form_builder
 description: Annotation System for flutter_form_builder package
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/precupstefan/flutter_annotation_form_builder
 
 environment:
@@ -17,6 +17,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^1.0.0
   build_runner: ^2.0.0
+  flutter_annotation_form_builder_generator: any
 
 # NOTE: remove before publishing
 dependency_overrides:
