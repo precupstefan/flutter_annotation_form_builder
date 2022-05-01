@@ -11,13 +11,16 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_form_builder: ^7.1.1
-  build_runner: any
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
-  generator:
+  build_runner: ^2.0.0
+
+# NOTE: remove before publishing
+dependency_overrides:
+  flutter_annotation_form_builder_generator:
     path: ../generator
 
 # For information on the generic Dart part of this file, see the
